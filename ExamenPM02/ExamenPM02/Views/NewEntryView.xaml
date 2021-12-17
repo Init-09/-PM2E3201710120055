@@ -27,7 +27,7 @@
                         CornerRadius="190"
                         Clicked="BtnCam_Clicked"
                         BackgroundColor="DarkSlateBlue"
-                        TextColor="White" />
+                        TextColor="White" /> 
                     
                     <Entry x:Name="idpago" Margin="0,10,0,0" Text="{Binding Id_pago, Mode=TwoWay}" IsVisible="false" />
 
@@ -37,7 +37,7 @@
                     
                     <Label  Text="Due Date"></Label>
                     
-                    <DatePicker x:Name="DueDate" Date="{Binding DueDate, Mode=TwoWay}" ></DatePicker>
+                    <DatePicker x:Name="DueDate" Date="{Binding DueDate, Mode=TwoWay}"></DatePicker>
 
                     <Button 
                     CornerRadius="190"

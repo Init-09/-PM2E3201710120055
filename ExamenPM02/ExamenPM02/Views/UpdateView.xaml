@@ -6,6 +6,17 @@
         <vm:ViewModelData/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
+        <StackLayout>
+        <StackLayout BackgroundColor="#96d1ff" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView BackgroundColor="White" Margin="20" Padding="20,20,20,20" VerticalOptions="FillAndExpand">
+                    <Image x:Name="img" Grid.Row="0" Grid.Column="0" 
+                           WidthRequest="300" HeightRequest="256" 
+                           MinimumWidthRequest="256" MinimumHeightRequest="300"
+                           Margin="2" VerticalOptions="Start" HorizontalOptions="Center"/>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
         <StackLayout Margin="20,35,20,20">
             <Entry x:Name="idpago" Text="{Binding Id_pago, Mode=TwoWay}" IsVisible="false" />
 
@@ -23,6 +34,7 @@
          
 
 
+        </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

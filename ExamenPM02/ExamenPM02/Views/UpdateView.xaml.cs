@@ -3,6 +3,7 @@ using ExamenPM02.Models;
 using ExamenPM02.Views;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,14 @@ namespace Examen_Movil.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpdateView : ContentPage
     {
+        private string imageBase64;
+
+
         public UpdateView()
         {
             InitializeComponent();
+            img.Source = Xamarin.Forms.ImageSource.FromStream(
+               () => new MemoryStream(Convert.FromBase64String(imageBase64)));
         }
         private async void btneliminar_Clicked(object sender, EventArgs e)
         {

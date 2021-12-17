@@ -51,14 +51,15 @@ namespace ExamenPM02.ViewModels
             }
         }
 
-        private byte[] photo;
-        public byte[] Photo
+
+        private string base64;
+        public string Imagen
         {
-            get { return photo; }
+            get { return base64; }
             set
             {
-                photo = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Photo"));
+                base64 = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Imagen"));
             }
         }
 
@@ -110,6 +111,7 @@ namespace ExamenPM02.ViewModels
                 Descripcion = descripcion,
                 Monto = Monto,
                 Fecha = DueDate,
+                Imagen = Imagen,
             });
 
             getTask();
