@@ -79,7 +79,7 @@ namespace Examen_Movil.Views
         }
          private async void btnlista_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Xamarin.Forms.ListView());
+            await Navigation.PushModalAsync(new ExamenPM02.Views.ListView());
         }
     }
 }

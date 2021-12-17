@@ -5,25 +5,66 @@
     <ContentPage.BindingContext>
         <vm:ViewModelData/>
     </ContentPage.BindingContext>
+
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="#e2f0e0" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <ContentView Padding="0,20,0,20" VerticalOptions="FillAndExpand">
+                        <Image x:Name="imgCam" Source="https://image.flaticon.com/icons/png/512/1255/1255351.png" VerticalOptions="Center" HeightRequest="128" />
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+            <ScrollView Grid.Row="1">
+                <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+
+                    <Button Margin="0,10,0,0" Text="Tomar Foto"
+                        x:Name="btnCam"
+                        CornerRadius="190"
+                        Clicked="BtnCam_Clicked"
+                        BackgroundColor="DarkSlateBlue"
+                        TextColor="White" />
+                    
+                    <Entry x:Name="idpago" Margin="0,10,0,0" Text="{Binding Id_pago, Mode=TwoWay}" IsVisible="false" />
+
+                    <Entry x:Name="description" Text="{Binding Descripcion, Mode=TwoWay}" Placeholder="Descripcion" />
+                    
+                    <Entry x:Name="monto" Text="{Binding Monto, Mode=TwoWay}" Placeholder="Cantidad" />
+                    
+                    <Label  Text="Due Date"></Label>
+                    
+                    <DatePicker x:Name="DueDate" Date="{Binding DueDate, Mode=TwoWay}" ></DatePicker>
+
+                    <Button 
+                    CornerRadius="190"
+                    Margin="0,10,0,0" Text="Salvar" 
+                    BackgroundColor="DarkSlateBlue"
+                    TextColor="White"  Command="{Binding cmdAddTask}" />
+                    <Button 
+                    CornerRadius="190"
+                    Margin="0,10,0,0" Text="Lista" 
+                    BackgroundColor="DarkSlateBlue"
+                    TextColor="White" x:Name="btnlista" Clicked="btnlista_Clicked"/>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+
+
+
+
+    <!--
         <StackLayout Margin="20,35,20,20">
-            <Entry x:Name="idpago" Text="{Binding Id_pago, Mode=TwoWay}" IsVisible="false" />
-
-            <Entry x:Name="description" Text="{Binding Descripcion, Mode=TwoWay}" Placeholder="Description" />
-            <Entry x:Name="monto" Text="{Binding Monto, Mode=TwoWay}" Placeholder="Description" />
-            <Label  Text="Due Date"></Label>
-            <DatePicker x:Name="DueDate" Date="{Binding DueDate, Mode=TwoWay}" ></DatePicker>
             
-            <Button Text="Save" Command="{Binding cmdAddTask}"/>
-
-            <Button x:Name="btnlista" Text="Lista" Clicked="btnlista_Clicked"/>
-
-           <Button x:Name="btnFoto" Text="Tomar Foto" Clicked="Button_Clicked" />
             <Image
             x:Name="image1" HeightRequest="300" WidthRequest="300"
             ></Image>
 
            
         </StackLayout>
-    </ContentPage.Content>
+    </ContentPage.Content>-->
 </ContentPage>

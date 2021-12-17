@@ -9,6 +9,7 @@ using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using System.Threading.Tasks;
 using ExamenPM02.ViewModels;
+using ExamenPM02.Models;
 
 namespace ExamenPM02.ViewModels
 {
