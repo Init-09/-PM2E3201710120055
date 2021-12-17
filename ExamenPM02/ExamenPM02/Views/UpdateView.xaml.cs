@@ -16,12 +16,16 @@ namespace Examen_Movil.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpdateView : ContentPage
     {
-        private string imageBase64;
+        private string imageBase64, id;
 
-
-        public UpdateView()
+        public UpdateView(string Imagen,int idp, string desc, Double mon, DateTime fech)
         {
+            imageBase64 = Imagen;
             InitializeComponent();
+            idpago.Text = idp.ToString();
+            description.Text = desc;
+            monto.Text = mon.ToString();
+            DueDate.Date = fech;
             img.Source = Xamarin.Forms.ImageSource.FromStream(
                () => new MemoryStream(Convert.FromBase64String(imageBase64)));
         }

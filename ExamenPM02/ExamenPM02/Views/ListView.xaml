@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <ListView x:Name="ListaPrecios" SelectionMode="Single" ItemsSource="{Binding TaskList }" ItemTapped="ListaPrecios_ItemTapped" RowHeight="80">
+            <ListView x:Name="ListaPrecios" SelectionMode="Single" ItemsSource="{Binding TaskList }" ItemSelected="ltusuario_ItemSelected" RowHeight="80">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

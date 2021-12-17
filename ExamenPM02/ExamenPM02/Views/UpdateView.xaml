@@ -6,7 +6,8 @@
         <vm:ViewModelData/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+            <StackLayout>
         <StackLayout BackgroundColor="#96d1ff" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView BackgroundColor="White" Margin="20" Padding="20,20,20,20" VerticalOptions="FillAndExpand">
@@ -18,12 +19,12 @@
             </StackLayout>
         </StackLayout>
         <StackLayout Margin="20,35,20,20">
-            <Entry x:Name="idpago" Text="{Binding Id_pago, Mode=TwoWay}" IsVisible="false" />
+            <Entry x:Name="idpago"  IsVisible="false" />
 
-            <Entry x:Name="description" Text="{Binding Descripcion, Mode=TwoWay}" Placeholder="Description" />
-            <Entry x:Name="monto" Text="{Binding Monto, Mode=TwoWay}" Placeholder="Description" />
+            <Entry x:Name="description"  Placeholder="Description" />
+            <Entry x:Name="monto"  Placeholder="Description" />
             <Label  Text="Due Date"></Label>
-            <DatePicker x:Name="DueDate" Date="{Binding DueDate, Mode=TwoWay}" ></DatePicker>
+            <DatePicker x:Name="DueDate"  ></DatePicker>
 
            
             <Button x:Name="btnlista" Text="Lista" Clicked="btnlista_Clicked"/>
@@ -35,6 +36,8 @@
 
 
         </StackLayout>
-        </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -25,8 +25,7 @@ namespace ExamenPM02
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage( new VistaAgregar());
+            MainPage = new NavigationPage(new VistaAgregar());
         }
 
         protected override void OnStart()

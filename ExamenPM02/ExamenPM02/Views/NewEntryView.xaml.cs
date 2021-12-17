@@ -27,7 +27,7 @@ namespace ExamenPM02.Views
 
         private async void btnlista_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new ListView());
+           await Navigation.PushAsync(new ListView());
         }
 
         private void Button_Clicked_1(object sender, EventArgs e)
